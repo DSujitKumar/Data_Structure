@@ -1,0 +1,41 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream>
+
+using namespace std;
+struct BstNode{
+    int data;
+    BstNode* left;
+    BstNode* right;
+}
+BstNode* GetNewNode(int data){ // function created for making the new node and it return the address of the new node.
+    BstNode* newNode = new BstNode();
+    newNode -> data=data;
+    newNode -> left=newNode -> right=NULL;
+    return newNode;
+}
+BstNode* Insert(BstNode* root,int data) {// It inserts the data into the tree,
+                                     //it takes address of the new node and the data that to be stored . 
+
+    if(root==NULL){ // check if empty tree
+        root=GetNewNode(data);
+        return root;
+    }
+}
+int main()
+{
+    BstNode* root=NULL; // Pointere to root BstNode
+    //root = NULL; //Setting tree as NULL
+    
+    root = Insert(root,15);
+    root = Insert(root,10);
+    root = Insert(root,20);
+
+    return 0;
+}
